@@ -1,0 +1,157 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* GLOBAL STYLES */
+
+body,
+.App {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 16px;
+  
+}
+
+button {
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  color: #08c;
+}
+button:hover {
+  color: #04c;
+}
+
+.App {
+  display: flex;
+}
+
+/*Style the sidebar */
+
+.sidebar{
+ width:30vw;
+ height:100vh;
+ border-right:1px solid #ddd;
+
+}
+
+
+.sidebar-header{
+  display:flex;
+  justify-content: space-between;
+  padding:25px;
+}
+
+.sidebar-header h1{
+  font-size:35px
+}
+.sidebar-header button{
+  background-color: transparent;
+  padding: 0;
+  border:0
+}
+.sidebar-header button:hover,
+.sidebar-header button:focus{
+  outline:0;
+}
+
+.sidebar-notes{
+height: calc(100vh - 78px);
+    overflow-y: scroll;
+}
+
+.sidebar-note{
+  padding:25px;
+  cursor:pointer;
+}
+.sidebar-note.active{
+  background: #08c;
+    color: #fff;
+}
+.sidebar-note.active:hover{
+  background-color:#08c
+}
+
+.sidebar-note:hover{
+background-color:#ddd
+}
+
+.sidebar-note-title{
+  display:flex;
+  justify-content:space-between
+}
+
+.sidebar-note-title button{
+  padding:0;
+  margin:0;
+  background-color: transparent;
+  color:red;
+border:0;
+}
+
+.sidebar-note-title button:focus{
+  outline:0;
+}
+
+/*Style the main*/
+.main{
+  height:100vh;
+  width:70vw;
+  
+  
+}
+
+.main-note-edit{
+  padding:25px;
+  border-bottom:1px solid #ddd;
+}
+
+.main-note-edit input{
+height:50px;
+border:1px solid #ddd;
+width:100%;
+font-size:2rem;
+}
+
+.main-note-edit textarea{
+  margin-top:30px;
+  margin-bottom: 30px;
+  display:block;
+  width:100%;
+  height:calc(50vh - 130px);
+  padding:10px;
+  resize:none;
+  font-size:inherit;
+  font-family: inherit;
+}
+
+.main-note-preview{
+  padding:20px;
+  padding-top:0
+
+}
+.main-note-preview h1{
+  font-size:2.5rem;
+  font-weight: bold;
+}
+
+.no-active-note{
+ margin-left:200px;
+    height: 100vh;
+    line-height: 100vh;
+    text-align: center;
+    font-size: 2rem;
+    color: #999;
+
+}
+
